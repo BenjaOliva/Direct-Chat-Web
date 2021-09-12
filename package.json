@@ -1,8 +1,9 @@
 {
-  "name": "test-app",
-  "version": "0.1.0",
+  "name": "direct-chat",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/icons": "^1.0.15",
     "@chakra-ui/react": "^1.6.7",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
@@ -10,10 +11,13 @@
     "@testing-library/react": "^10.4.9",
     "@testing-library/user-event": "^12.8.3",
     "framer-motion": "^4.1.17",
+    "libphonenumber-js": "^1.9.32",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^3.11.0",
     "react-scripts": "4.0.3",
+    "react-world-flags": "^1.4.0",
+    "states-cities-db": "^1.4.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
