@@ -22,7 +22,7 @@ const App = () => {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="89vh" p={3}>
+        <Grid minH="90vh" p={3}>
           <Navbar />
           <VStack>
             <Body isOpen={true}></Body>

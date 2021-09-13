@@ -5,15 +5,33 @@ import {
   Center,
   Heading,
   Text,
+  Textarea,
   Stack,
   useDisclosure,
   useColorModeValue,
   Collapse,
-  Divider
+  Divider,
+  FormControl,
+  FormLabel,
+  Switch
 } from '@chakra-ui/react';
+
+import PhoneNumberInput from './PhoneNumberInput';
+
+import { COUNTRIES } from "./countries";
 
 export const Body = () => {
   const { isOpen, onToggle } = useDisclosure()
+  const [value, setValue] = useState("");
+
+  const countryOptions = COUNTRIES.map(({ name, iso }) => ({
+    label: name,
+    value: iso
+  }));
+
+  function handleChange(value) {
+    setValue(value);
+  }
 
   return (
     <Center mt={4} mb={6}>
@@ -42,25 +60,42 @@ export const Body = () => {
             Complete los campos para Iniciar el chat!
           </Heading>
           <Text color={'gray.500'}>
-           Seleccione primero el país y luego ingrese el número con quien desea chatear.
+            Seleccione primero el país y luego ingrese el número con quien desea chatear.
           </Text>
         </Stack>
         <Divider mt={4} mb={4} />
         <Stack>
-          
+          <PhoneNumberInput
+            value={value}
+            options={countryOptions}
+            placeholder="Seleccione primero el pais..."
+            onChange={handleChange}
+            mb={6}
+          />
+          <FormControl display="flex" alignItems="center">
+            <FormLabel htmlFor="message-toggle" mb="0">
+              Iniciar chat con un mensaje?
+            </FormLabel>
+            <Switch ml={7} id="message-toggle" size="lg" onChange={onToggle} />
+          </FormControl>
+          <Collapse in={isOpen} animateOpacity>
+            <Box
+              p="30px"
+              color="white"
+              mt="4"
+              bg="green.600"
+              rounded="md"
+              shadow="md"
+            >
+              <Text mb="7px">Texto del Mensaje: </Text>
+              <Textarea
+                placeholder="Escriba aqui el mensaje..."
+                size="sm"
+              />
+            </Box>
+          </Collapse>
         </Stack>
-       <Button w="100%" colorScheme="green" bg='green.700' mt={3} > Calcular!</Button>
-        <Collapse in={isOpen} animateOpacity>
-          <Box
-            p="40px"
-            color="white"
-            mt="4"
-            bg="teal.700"
-            rounded="lg"
-            shadow="md"
-          >
-           </Box>
-        </Collapse>
+        <Button w="100%" colorScheme="green" bg='green.700' disabled={true} mt={3} > Ir al Chat!</Button>
       </Box>
     </Center>
   )
