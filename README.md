@@ -56,4 +56,4 @@ Oliva Clariá, Benjamín
 
 Diseño propio, inspirado en templates de componentes de Chakra UI y de mi proyecto [Crypto Blue](https://github.com/BenjaOliva/Crypto-Blue-Web).
 
-
+Se hizo uso de un componente obtenido de un [Codesandbox](https://codesandbox.io/s/chakra-ui-phone-input-i4l96)
