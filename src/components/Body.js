@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Button,
@@ -23,6 +23,9 @@ import { COUNTRIES } from "./countries";
 export const Body = () => {
   const { isOpen, onToggle } = useDisclosure()
   const [value, setValue] = useState("");
+  const [number, setNumber] = useState("");
+  const [text, setText] = useState("");
+  const [enableState, setEnable] = useState(true);
 
   const countryOptions = COUNTRIES.map(({ name, iso }) => ({
     label: name,
@@ -30,7 +33,14 @@ export const Body = () => {
   }));
 
   function handleChange(value) {
-    setValue(value);
+    //console.log(value);
+    setValue(value)
+    setNumber(value)
+    value.indexOf("+") ? setEnable(true) : setEnable(false);
+  }
+
+  function handleTextField(event) {
+    setText(event.target.value)
   }
 
   return (
@@ -70,32 +80,33 @@ export const Body = () => {
             options={countryOptions}
             placeholder="Seleccione primero el pais..."
             onChange={handleChange}
-            mb={6}
+            mb={4}
           />
           <FormControl display="flex" alignItems="center">
             <FormLabel htmlFor="message-toggle" mb="0">
               Iniciar chat con un mensaje?
             </FormLabel>
-            <Switch ml={7} id="message-toggle" size="lg" onChange={onToggle} />
+            <Switch ml={7} colorScheme="whatsapp" id="message-toggle" size="lg" onChange={ () => {onToggle(); setText("")}} />
           </FormControl>
           <Collapse in={isOpen} animateOpacity>
             <Box
-              p="30px"
+              p="20px"
               color="white"
-              mt="4"
-              bg="green.600"
+              mt="2"
+              bg="green.900"
               rounded="md"
               shadow="md"
             >
-              <Text mb="7px">Texto del Mensaje: </Text>
+              <Text mb="6px">Texto del Mensaje: </Text>
               <Textarea
                 placeholder="Escriba aqui el mensaje..."
+                onChange={handleTextField}
                 size="sm"
               />
             </Box>
           </Collapse>
         </Stack>
-        <Button w="100%" colorScheme="green" bg='green.700' disabled={true} mt={3} > Ir al Chat!</Button>
+        <Button isDisabled={enableState} w="100%" as="a" href={`https://api.whatsapp.com/send/?phone=${number}&text=${text}`} rel="noopener noreferrer" target="_blank" colorScheme="green" bg='green.600' mt={3} > Ir al Chat!</Button>
       </Box>
     </Center>
   )

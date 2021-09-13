@@ -23,13 +23,17 @@ const App = () => {
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="90vh" p={3}>
-          <Navbar />
+          <div id="Inicio">
+            <Navbar />
+          </div>
           <VStack>
             <Body isOpen={true}></Body>
           </VStack>
         </Grid>
       </Box>
-      <Footer />
+      <div id="Contacto">
+        <Footer />
+      </div>
     </ChakraProvider>
   );
 }

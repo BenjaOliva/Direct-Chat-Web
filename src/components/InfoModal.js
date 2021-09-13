@@ -70,7 +70,7 @@ const InfoModal = ({ openModal, setModal }) => {
                     </Accordion>
                 </ModalBody>
                 <ModalFooter>
-                    <Button colorScheme="blue" mr={3} onClick={() => { setModal(false) }}>
+                    <Button colorScheme="green" mr={3} onClick={() => { setModal(false) }}>
                         Cerrar
                     </Button>
                 </ModalFooter>

@@ -3,7 +3,6 @@ import { FaGlobeAmericas } from "react-icons/fa";
 import {
   Box,
   Flex,
-  Icon,
   Input,
   Select,
   InputGroup,
@@ -12,17 +11,17 @@ import {
 import Flag from "react-world-flags";
 import { AsYouType } from "libphonenumber-js";
 import { getCountryTelCode } from "./countries";
-import {ChevronDownIcon} from "@chakra-ui/icons"
 
-export default function PhoneNumberInput({
-  size,
-  value,
-  country,
-  options,
-  onChange,
-  placeholder,
-  ...rest
-}) {
+export default function PhoneNumberInput(props) {
+  const {
+    size,
+    value,
+    country,
+    options,
+    onChange,
+    placeholder,
+    ...rest
+  } = props  
   let [number, setNumber] = useState(value);
   let [selectedCountry, setSelectedCountry] = useState(country || "");
   let [countryCode, setCountryCode] = useState(
@@ -50,10 +49,10 @@ export default function PhoneNumberInput({
 
   const onPhoneNumberChange = (e) => {
     let value = e.target.value;
-    let parsedNumber = new AsYouType().input(`${countryCode}${value}`);
+    //let parsedNumber = new AsYouType().input(`${countryCode}${value}`);
 
     setNumber(value);
-    onChange(parsedNumber);
+    onChange(value);
   };
 
   return (
@@ -70,7 +69,7 @@ export default function PhoneNumberInput({
           value={selectedCountry}
           onChange={onCountryChange}
         >
-          <option value="" />
+          <option value={''} />
           {options.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}
