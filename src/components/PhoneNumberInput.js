@@ -24,13 +24,9 @@ export default function PhoneNumberInput(props) {
   } = props  
   let [number, setNumber] = useState(value);
   let [selectedCountry, setSelectedCountry] = useState(country || "");
-  let [countryCode, setCountryCode] = useState(
-    getCountryTelCode(country) || ""
-  );
 
   useEffect(() => {
     setSelectedCountry(country);
-    setCountryCode(getCountryTelCode(country));
   }, [country]);
 
   useEffect(() => {
@@ -42,14 +38,12 @@ export default function PhoneNumberInput(props) {
     let code = getCountryTelCode(value);
     let parsedNumber = new AsYouType().input(`${code}${number}`);
 
-    setCountryCode(code);
     setSelectedCountry(value);
     onChange(parsedNumber);
   };
 
   const onPhoneNumberChange = (e) => {
     let value = e.target.value;
-    //let parsedNumber = new AsYouType().input(`${countryCode}${value}`);
 
     setNumber(value);
     onChange(value);
