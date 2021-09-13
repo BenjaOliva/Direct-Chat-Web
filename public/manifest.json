@@ -8,14 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "DirectChat-Logo-192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x196"
     },
     {
-      "src": "logo512.png",
+      "src": "DirectChat-Logo-512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x523"
     }
   ],
   "start_url": ".",

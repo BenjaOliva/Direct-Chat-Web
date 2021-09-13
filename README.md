@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fdirectchat.vercel.app)
+![GitHub last commit](https://img.shields.io/github/last-commit/BenjaOliva/Direct-Chat-Web?label=Ultimo%20Commit)
+<img width="140px" src="public/DirectChat-Logo-512.png" align="left" />
 
-## Available Scripts
+# Direct Chat Web
 
-In the project directory, you can run:
+>Sitio web de Direct Chat
 
-### `npm start`
+## Descripción
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+El sitio "Direct Chat" ofrece una herramineta al usuario para poder iniciar un chat con un numero en especifico de forma rapida y sencilla, sin tener que agendar el número en cuestión previamente. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Además, se puede iniciar el chat con un mensaje escrito desde el sitio para luego enviarse una vez el chat se haya iniciado.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Detalles del Proyecto
 
-### `npm run build`
+### Tecnologias Aplicadas
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* HTML, CSS y JavaScript Vanilla
+* ReactJS
+* Create React App
+* API de WhatsApp
+* Chakra UI
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Diseño de la plataforma
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* El diseño de la plataforma esta adaptado a Desktop, Tablet y mobile (responsive)
 
-### `npm run eject`
+## Autor
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Desarrollador y Diseñador del proyecto:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Oliva Clariá, Benjamín  
+* Linkedin: [https://www.linkedin.com/in/benjamin-oliva-clariá-953454181](https://www.linkedin.com/in/benjamin-oliva-clariá-953454181)
+* Instagram: [@benjaaoliva](https://instagram.com/benjaaoliva/)
+* ![Twitter Follow](https://img.shields.io/twitter/follow/benjaa_20?style=social)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Historial de Versiones
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* 1.0
+    * Publicación del Proyecto en GitHub
 
-## Learn More
+## Herramientas de desarrollo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Visual Studio Code
+    * Extensiones:
+        * [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+        * [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+        * Otras extensiones de formateo de codigo...
+* Node.js
+* Navegador Brave
+* GitHub Desktop App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Créditos de Uso e Inspiraciones
 
-### Code Splitting
+Diseño propio, inspirado en templates de componentes de Chakra UI y de mi proyecto [Crypto Blue](https://github.com/BenjaOliva/Crypto-Blue-Web).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
